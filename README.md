@@ -1,11 +1,12 @@
-# Zephyr-ESP32_devkitm1
-Zephyr example with ESP32 devkit RGB leds. 
+# ZephyrOS Timers demo
+Zephyr example with ESP32 C3 mini devkit showing how to use kernel timers 
 
 ## What does this demo do?
-This demo flashes the LED white at 1Hz and prints "+" to the console at the same rate. These concepts are demonstrated:
-* How to add a device tree overlay (app.overlay) to add new gpios
-* How to use the K_msleep to effect a delay
-* Simple use of the console and kprint() 
+This demo shows the use of Zephyr OS kernel timers and work queues.
+**Specific topics:**
+* Creation of timers at compile time or run time
+* Avoidance of processing in timer interupt using work queues
+
 
 ## Hardware notes ##
 This project uses the generic ESP32-C3-Devkit_M1. This unit is not identical to the official Espressif model. One difference is the RGB led, in the generic unit this is 3 LEDs but in the Espressif version its an LED driver module. The generic unit has a product marking "GOOUUU-ESP32-C3" on the underside.  The standard board **esp32c3_devkitm** is used
